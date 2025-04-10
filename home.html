@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hannah Jove - Profile</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+        body {
+            font-family: 'Orbitron', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            width: 100vw;
+            overflow-x: hidden;
+            background: black;
+            color: cyan;
+            position: relative;
+        }
+
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://w0.peakpx.com/wallpaper/144/374/HD-wallpaper-neon-samurai-cyberpunk.jpg') no-repeat center center fixed;
+            background-size: cover;
+            background-attachment: scroll;
+            opacity: 1;
+            z-index: -1;
+        }
+
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 90px;
+            background: linear-gradient(135deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 50, 0.8)), 
+                        radial-gradient(circle, black, magenta, black);
+            border-bottom: 4px solid black;
+            box-shadow: 0 0 10px cyan, 0 0 18px purple, 0 0 20px pink;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+            z-index: 9999;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 16px 25px;
+            font-size: 18px;
+            font-weight: bold;
+            border: 3px solid black;
+            border-radius: 5px;
+            transition: 0.3s;
+            box-shadow: 
+                0 0 10px cyan,  
+                0 0 18px purple,  
+                0 0 20px pink;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            line-height: 1;
+            display: inline-block;
+        }
+
+        .navbar a:hover {
+            background: magenta;
+            color: black;
+            box-shadow: 0 0 10px magenta;
+        }
+
+        .container {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            background: rgba(0, 0, 0, 0.8);
+        }
+
+        .left-section {
+            width: 25%;
+            background-image: url('https://img.freepik.com/premium-photo/futuristic-digital-human-face-concept-illustrating-artificial-intelligence-cyber-technology_996993-37160.jpg');
+            background-size: cover;
+            background-position: center;
+            color: cyan;
+            padding: 20px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border-right: 5px solid magenta;
+            box-shadow: 0px 0px 15px cyan;
+        }
+
+        .profile-pic {
+            width: 140px;
+            height: 140px;
+            border-radius: 30%;
+            object-fit: cover;
+            border: 15px solid black; 
+            box-shadow: 
+                0 0 20px pink,  
+                0 0 40px purple,  
+                0 0 80px cyan;  
+            margin-bottom: 10px;
+        }
+
+        .left-section h2 {
+            font-size: 22px;
+            font-weight: bold;
+            padding: 5px 10px;
+            background: linear-gradient(45deg, black 60%, magenta 30%, lime); 
+            color: white; 
+            display: inline-block;
+            border-radius: 8px;
+        }
+
+
+        .left-section h2 a {
+            font-size: 19px;
+            font-weight: bold;
+            color: white;
+            text-decoration: none;
+            text-shadow: 
+            3px 3px 15px lime,  
+           -3px -3px 15px magenta,
+            4px 4px 20px red,
+           -4px 4px 20px lime, 
+            4px -4px 20px magenta; 
+            transition: 0.3s;
+
+        }
+
+        .left-section h2 a:hover {
+            color: cyan;
+            text-decoration: underline;
+        }
+        .left-address {
+            font-size: 13px;
+            font-family: 'Orbitron', sans-serif; 
+            line-height: 1.4; 
+            position: absolute;
+            bottom: 20px;
+            width: 100%;
+            text-align: center;
+            color: white; 
+            text-shadow: 2px 2px 5px black;
+}
+
+        .left-address::before {
+            content: "";
+            display: block;
+            width: 15%; 
+            height: 2px;
+            background: cyan;
+            margin: 0 auto 10px; 
+            box-shadow: 3px 3px 5px lime, -3px -3px 5px darkmagenta; 
+        }
+
+        .right-section {
+            width: 75%;
+            padding: 100px 50px 50px;
+            text-align: center;
+        }
+
+        .section h2 {
+            font-size: 35px;
+            color: white;
+            display: inline-block;
+            padding: 10px 15px;
+            border: 2px solid lime;
+            box-shadow: 
+                0 0 20px cyan,  
+                0 0 40px magenta, 
+                0 0 80px cyan;  
+        }
+
+        .framed-text {
+            font-size: 16px;
+            line-height: 1.6;
+            border: 2px solid magenta;
+            padding: 20px;
+            border-radius: 10px;
+            background: rgba(0, 0, 0, 0.8);
+            box-shadow: 0 0 10px cyan;
+            color: white;
+        }
+
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+            text-align: center;
+        }
+
+        li::before {
+            content: "▶";
+            color: magenta;
+            padding-right: 10px;
+        }
+
+        .video-container {
+            width: 120vw;
+            max-width: 100%;
+            height: 90vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(to right, black, cyan, magenta);
+            background-size: cover;
+            box-shadow: 0 0 20px cyan, 0 0 40px magenta;
+            text-align: center;
+            flex-direction: column;
+            border-radius: 12px;
+            position: relative;
+            top: 0px;
+            margin-top: 0px;
+            margin-bottom: 50px;
+            padding: 40px 70px;
+        }
+
+        video {
+            width: 90%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 0 15px cyan, 0 0 30px magenta;
+            transition: transform 0.5s ease-in-out;
+            margin: 0;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            justify-content: space-between;
+        }
+
+        .right-section {
+            padding-bottom: 120px;
+        }
+
+        @media screen and (max-width: 768px) {
+            .video-container {
+                height: 80vh;
+            }
+
+            video {
+                height: auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <a href="home.html">Home</a>
+        <a href="personalinterests.html">Personal Interests</a>
+        <a href="contact.html">Contact</a>
+        <a href="certifications.html">Certifications</a>
+    </div>
+
+    <div class="container">
+        <div class="left-section">
+            <img src="images/hannah.jpg" alt="Hannah Jove" class="profile-pic">
+            <h2>
+                <a href="contact.html">HANNAH JOVE</a>
+            </h2>
+            <p class="left-address">
+                Trees Residences, Regalado Avenue,<br>
+                Barangay Greater Lagro, Quezon City,<br>
+                Metro Manila, Philippines.
+            </p>
+        </div>
+
+        <div class="right-section">
+            <div class="section about" style="margin-top: 40px;">
+                <h2>So, who am I?</h2>
+                <p class="framed-text">Hi, I'm Hannah Jove! I'm 19 years old and currently studying to become an IT professional. I'm passionate about technology and excited about the endless possibilities it offers. Whether it's problem-solving or learning new skills, I'm always eager to dive deeper into the world of information technology.</p>
+            </div>
+            <div class="section skills">
+                <h2>What can Hannah do?</h2>
+                <ul class="framed-text">
+                    <li>Ability to prioritize tasks effectively and meet deadlines in fast-paced environments.</li>
+                    <li>Proficient in Microsoft Word and PowerPoint, able to create polished documents and engaging presentations.</li>
+                    <li>Fluent in both English and Filipino, with strong written and verbal communication skills in both languages.</li>
+                    <li>Strong analytical thinking skills, able to troubleshoot and resolve issues efficiently.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <video autoplay controls width="800" height="450">
+            <source src="videos/lv_7270481182523936001_20250329023032.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+</body>
+</html>
